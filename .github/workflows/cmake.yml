@@ -30,7 +30,7 @@ jobs:
     - uses: lukka/get-cmake@latest
 
     - name: Set up cmake
-      run: cmake ../
+      run: mkdir build; cd build; cmake ../
 
     - name: Run cmake
       run: cmake --build .
