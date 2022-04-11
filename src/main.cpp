@@ -1,6 +1,9 @@
 #include <iostream>
 #include <gtest/gtest.h>
 #include <benchmark/benchmark.h>
+#include <libpmemobj++/make_persistent.hpp>
+#include <libpmemobj++/make_persistent_array.hpp>
+
 
 /**
 int main() {
