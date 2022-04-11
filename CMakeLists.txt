@@ -32,6 +32,15 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(pmdk)
 
+FetchContent_Declare(
+        libpmemobjcpp
+        GIT_REPOSITORY https://github.com/pmem/libpmemobj-cpp.git
+        GIT_TAG        1.13.0
+)
+FetchContent_MakeAvailable(libpmemobjcpp)
+
+
+
 # https://google.github.io/googletest/quickstart-cmake.html
 
 #add_executable(skiplist_client src/main.cpp)
