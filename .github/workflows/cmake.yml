@@ -33,5 +33,5 @@ jobs:
       run: mkdir build; cd build; cmake ../
 
     - name: Run cmake
-      run: cmake --build .
+      run: cd build; cmake --build .
 
