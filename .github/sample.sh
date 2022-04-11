@@ -1,7 +1,19 @@
 #!/bin/sh
 
-sudo apt install autoconf automake pkg-config libglib2.0-dev libfabric-dev pandoc \
-libncurses5-dev valgrind libpmemobj-cpp-dev libdaxctl-dev \
-libndctl-dev libnuma-dev libtbb-dev libtool rapidjson-dev
+sudo apt install autoconf automake build-essential cmake libdaxctl-dev \
+libndctl-dev libnuma-dev libtbb-dev libtool rapidjson-dev pandoc valgrind
 
-echo "##########################################"
+cd ~
+git clone https://github.com/pmem/pmdk
+cd pmdk
+make -j$(nproc)
+sudo make install
+
+cd ~
+git clone https://github.com/pmem/libpmemobj-cpp
+cd libpmemobj-cpp
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+sudo make install

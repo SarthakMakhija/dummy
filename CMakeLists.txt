@@ -25,19 +25,19 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googlebenchmark)
 
-FetchContent_Declare(
-        pmdk
-        GIT_REPOSITORY https://github.com/pmem/pmdk.git
-        GIT_TAG        1.11.1
-)
-FetchContent_MakeAvailable(pmdk)
-
-FetchContent_Declare(
-        libpmemobjcpp
-        GIT_REPOSITORY https://github.com/pmem/libpmemobj-cpp.git
-        GIT_TAG        1.13.0
-)
-FetchContent_MakeAvailable(libpmemobjcpp)
+#FetchContent_Declare(
+#        pmdk
+#        GIT_REPOSITORY https://github.com/pmem/pmdk.git
+#        GIT_TAG        1.11.1
+#)
+#FetchContent_MakeAvailable(pmdk)
+#
+#FetchContent_Declare(
+#        libpmemobjcpp
+#        GIT_REPOSITORY https://github.com/pmem/libpmemobj-cpp.git
+#        GIT_TAG        1.13.0
+#)
+#FetchContent_MakeAvailable(libpmemobjcpp)
 
 
 
