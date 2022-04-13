@@ -50,7 +50,7 @@ message(STATUS "libpmemobjcpp binary dir: ${libpmemobjcpp_BINARY_DIR}")
 message(STATUS "libpmemobj source dir: ${libpmemobj_SOURCE_DIR}")
 
 find_path(LIBPMEMOBJ_INCLUDE_DIR libpmemobj.h)
-find_path(LIBPMEMOBJ_CPP_INCLUDE_DIR NAMES libpmemobj++/make_persistent.hpp PATHS ${libpmemobjcpp_SOURCE_DIR} ${libpmemobjcpp_SOURCE_DIR}/include/libpmemobj++/)
+find_path(LIBPMEMOBJ_CPP_INCLUDE_DIR NAMES make_persistent.hpp PATHS ${libpmemobjcpp_SOURCE_DIR} ${libpmemobjcpp_SOURCE_DIR}/include/libpmemobj++/)
 find_path(LIBPMEM_INCLUDE_DIR libpmem.h)
 
 message(STATUS "LIBPMEMOBJ_INCLUDE_DIR: ${LIBPMEMOBJ_INCLUDE_DIR}")
@@ -67,7 +67,11 @@ message(STATUS "LIBPMEMOBJ_LIBRARY: ${LIBPMEMOBJ_LIBRARY}")
 # https://google.github.io/googletest/quickstart-cmake.html
 
 add_executable(skiplist_client src/main.cpp)
-target_include_directories(skiplist_client PRIVATE ${LIBPMEMOBJ_INCLUDE_DIR} ${LIBPMEM_INCLUDE_DIR} ${LIBPMEMOBJ_CPP_INCLUDE_DIR})
+target_include_directories(skiplist_client PRIVATE
+        ${LIBPMEMOBJ_INCLUDE_DIR}
+        ${LIBPMEM_INCLUDE_DIR}
+        /home/runner/work/dummy/dummy/build/_deps/libpmemobjcpp-src/include/)
+
 target_link_libraries(skiplist_client PRIVATE gtest_main benchmark::benchmark benchmark::benchmark_main ${LIBPMEM_LIBRARY} ${LIBPMEMOBJ_LIBRARY})
 
 enable_testing()
