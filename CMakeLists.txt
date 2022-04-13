@@ -50,7 +50,7 @@ message(STATUS "libpmemobjcpp binary dir: ${libpmemobjcpp_BINARY_DIR}")
 message(STATUS "libpmemobj source dir: ${libpmemobj_SOURCE_DIR}")
 
 find_path(LIBPMEMOBJ_INCLUDE_DIR libpmemobj.h)
-find_path(LIBPMEMOBJ_CPP_INCLUDE_DIR ${libpmemobjcpp_SOURCE_DIR}/include/libpmemobj++/make_persistent.hpp)
+find_path(LIBPMEMOBJ_CPP_INCLUDE_DIR make_persistent.hpp)
 find_path(LIBPMEM_INCLUDE_DIR libpmem.h)
 
 message(STATUS "LIBPMEMOBJ_INCLUDE_DIR: ${LIBPMEMOBJ_INCLUDE_DIR}")
