@@ -2,6 +2,7 @@
 #include <gtest/gtest.h>
 #include <benchmark/benchmark.h>
 #include <libpmemobj++/make_persistent.hpp>
+#include <libpmemobj++/transaction.hpp>
 #include <libpmemobj++/make_persistent_array.hpp>
 
 
@@ -46,7 +47,6 @@ struct Node {
 TEST(HelloTest, BasicAssertions) {
     // Expect two strings not to be equal.
 
-    auto ppp = pmem::obj::make_persistent<Node>();
 
     EXPECT_STRNE("hello", "world");
     // Expect equality.
