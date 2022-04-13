@@ -49,8 +49,8 @@ message(STATUS "libpmemobjcpp source dir: ${libpmemobjcpp_SOURCE_DIR}")
 message(STATUS "libpmemobjcpp binary dir: ${libpmemobjcpp_BINARY_DIR}")
 message(STATUS "libpmemobj source dir: ${libpmemobj_SOURCE_DIR}")
 
-find_path(LIBPMEMOBJ_INCLUDE_DIR ${libpmemobjcpp_SOURCE_DIR}/libpmemobj.h)
-find_path(LIBPMEM_INCLUDE_DIR ${libpmemobjcpp_SOURCE_DIR}/libpmem.h)
+find_path(LIBPMEMOBJ_INCLUDE_DIR libpmemobj.h)
+find_path(LIBPMEM_INCLUDE_DIR libpmem.h)
 
 find_library(LIBPMEM_LIBRARY NAMES pmem libpmem)
 find_library(LIBPMEMOBJ_LIBRARY NAMES pmemobj libpmemobj)
