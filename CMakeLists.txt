@@ -52,6 +52,10 @@ message(STATUS "libpmemobj source dir: ${libpmemobj_SOURCE_DIR}")
 find_path(LIBPMEMOBJ_INCLUDE_DIR libpmemobj.h)
 find_path(LIBPMEM_INCLUDE_DIR libpmem.h)
 
+message(STATUS "LIBPMEMOBJ_INCLUDE_DIR: ${LIBPMEMOBJ_INCLUDE_DIR}")
+message(STATUS "LIBPMEM_INCLUDE_DIR: ${LIBPMEM_INCLUDE_DIR}")
+
+
 find_library(LIBPMEM_LIBRARY NAMES pmem libpmem)
 find_library(LIBPMEMOBJ_LIBRARY NAMES pmemobj libpmemobj)
 
