@@ -48,3 +48,9 @@ find_library(LIBPMEMOBJ_LIBRARY NAMES pmemobj libpmemobj)
 
 add_executable(skiplist_client src/main.cpp)
 target_link_libraries(skiplist_client PRIVATE gtest_main benchmark::benchmark benchmark::benchmark_main ${LIBPMEM_LIBRARY} ${LIBPMEMOBJ_LIBRARY})
+
+enable_testing()
+add_test(
+        NAME skiplist_client
+        COMMAND $<TARGET_FILE:skiplist_client>
+)

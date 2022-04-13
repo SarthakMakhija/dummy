@@ -39,8 +39,15 @@ int main() {
 }
 **/
 
+struct Node {
+    pmem::obj::p<int> id;
+};
+
 TEST(HelloTest, BasicAssertions) {
     // Expect two strings not to be equal.
+
+    auto ppp = pmem::obj::make_persistent<Node>();
+
     EXPECT_STRNE("hello", "world");
     // Expect equality.
     EXPECT_EQ(7 * 6, 42);
