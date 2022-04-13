@@ -34,12 +34,16 @@ FetchContent_MakeAvailable(googlebenchmark)
 
 #install(TARGETS pmdk DESTINATION /usr/local/lib/)
 
-#FetchContent_Declare(
-#        libpmemobjcpp
-#        GIT_REPOSITORY https://github.com/pmem/libpmemobj-cpp.git
-#        GIT_TAG        1.13.0
-#)
-#FetchContent_MakeAvailable(libpmemobjcpp)
+FetchContent_Declare(
+        libpmemobjcpp
+        GIT_REPOSITORY https://github.com/pmem/libpmemobj-cpp.git
+        GIT_TAG        1.13.0
+)
+FetchContent_MakeAvailable(libpmemobjcpp)
+
+FetchContent_GetProperties(libpmemobjcpp)
+message(STATUS "libpmemobjcpp source dir: ${libpmemobjcpp_SOURCE_DIR}")
+message(STATUS "libpmemobjcpp binary dir: ${libpmemobjcpp_BINARY_DIR}")
 
 find_library(LIBPMEM_LIBRARY NAMES pmem libpmem)
 find_library(LIBPMEMOBJ_LIBRARY NAMES pmemobj libpmemobj)
