@@ -25,12 +25,12 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googlebenchmark)
 
-FetchContent_Declare(
-        pmdk
-        GIT_REPOSITORY https://github.com/pmem/pmdk.git
-        GIT_TAG        1.11.1
-)
-FetchContent_MakeAvailable(pmdk)
+#FetchContent_Declare(
+#        pmdk
+#        GIT_REPOSITORY https://github.com/pmem/pmdk.git
+#        GIT_TAG        1.11.1
+#)
+#FetchContent_MakeAvailable(pmdk)
 
 #install(TARGETS pmdk DESTINATION /usr/local/lib/)
 
