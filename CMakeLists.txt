@@ -32,8 +32,8 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(pmdk)
 
-install(TARGETS pmdk DESTINATION /usr/local/lib/)
-#
+#install(TARGETS pmdk DESTINATION /usr/local/lib/)
+
 #FetchContent_Declare(
 #        libpmemobjcpp
 #        GIT_REPOSITORY https://github.com/pmem/libpmemobj-cpp.git
